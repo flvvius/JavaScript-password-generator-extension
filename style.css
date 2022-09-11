@@ -1,0 +1,95 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif ;
+}
+
+body {
+    background-color: rgba(90, 58, 171, 0.8);
+    display: flex;
+    justify-content: center;
+}
+
+#container {
+    display: block;
+    background-color: rgba(90, 58, 171, 1);
+    margin: 20px;
+    /*text-align: center;*/
+    color: white;
+    padding: 10px;
+   /* width: fit-content;*/
+    width: 350px;
+    box-shadow: 2px 2px 5px rgb(21, 19, 26);
+    border-radius: 15px;
+    border: 1px solid rgb(21, 19, 26);
+}
+
+.item {
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.item input:not(#length) {
+    width: 19px;
+    height: 19px;
+}
+
+input, input:checked {
+    border-radius: 3px;
+    border: none;
+}
+
+label {
+    font-size: 14px;
+}
+
+#password {
+    width: 100%;
+    padding: 8px;
+    background-color: rgba(107, 95, 138, 0.5);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.length {
+    margin: 16px 0;
+}
+
+#buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 12px;
+}
+
+button {
+    padding: 10px 5px;
+    width: 135px;
+    background-color: rgb(214, 195, 26);
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    color: rgb(70, 48, 124);
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+button:active {
+    transform: scale(0.98);
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+}
+
+#paragraph {
+    text-align: center;
+}
+
+#credits {
+    opacity: 60%;
+    font-size: 14px;
+    position: relative;
+    top: 12px;
+}

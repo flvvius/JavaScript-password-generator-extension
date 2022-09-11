@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="container">
+        <div class="pass item">
+          <span id="password">Generated password will appear here</span>
+        </div>
+        <div class="item length">
+            <label for="length">Password Length</label>
+            <input type="number" name="length" id="length" min="8" max="32" value="18" required>
+        </div>
+        <div class="item">
+            <label for="upper">Contain uppercase letters</label>
+            <input type="checkbox" name="upper" id="upper" checked>
+        </div>
+        <div class="item">
+            <label for="lower">Contain lowercase letters</label>
+            <input type="checkbox" name="lower" id="lower" checked>
+        </div>
+        <div class="item">
+            <label for="numbers">Contain numbers</label>
+            <input type="checkbox" name="numbers" id="numbers" checked>
+        </div>
+        <div class="item">
+            <label for="symbols">Contain symbols</label>
+            <input type="checkbox" name="symbols" id="symbols" checked>
+        </div>
+        <div id="buttons">
+            <button id="generate">Generate Password</button>
+            <button id="save">Save Password</button>
+        </div>
+        <p id="paragraph"></p>
+        <p id="credits">© Flavius Cojocaru</p>
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html>
