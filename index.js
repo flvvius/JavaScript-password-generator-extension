@@ -12,13 +12,13 @@ const uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 const lowercase = "abcdefghijklmnopqrstuvwxyz"
 const symbols = "?!@#$%^&*~()_-+=|"
 
-const getUppercase = () => uppercase[Math.floor(Math.random() * uppercase.length)]
+const getUppercase = () => uppercase[Math.floor((crypto.getRandomValues(new Uint32Array(1))[0] / 0x100000000) * uppercase.length)]
 
-const getLowercase = () => lowercase[Math.floor(Math.random() * lowercase.length)]
+const getLowercase = () => lowercase[Math.floor((crypto.getRandomValues(new Uint32Array(1))[0] / 0x100000000) * lowercase.length)]
 
-const getNumber = () => Math.floor(Math.random() * 10)
+const getNumber = () => Math.floor((crypto.getRandomValues(new Uint32Array(1))[0] / 0x100000000) * 10)
 
-const getSymbols = () => symbols[Math.floor(Math.random() * symbols.length)]
+const getSymbols = () => symbols[Math.floor((crypto.getRandomValues(new Uint32Array(1))[0] / 0x100000000) * symbols.length)]
 
 const generatePassword = () => {
     const len = lengthEl.value
@@ -48,7 +48,7 @@ const generateX = () => {
     if (X.length === 0)
         return ""
     else
-        return X[Math.floor(Math.random() * X.length)]
+        return X[Math.floor((crypto.getRandomValues(new Uint32Array(1))[0] / 0x100000000) * X.length)]
 }
 
 generateEl.addEventListener("click", generatePassword)
